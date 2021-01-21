@@ -30,8 +30,8 @@ class App extends React.Component {
   refreshDogPicture() {
     return (
       <div>
-        <img src={this.state.dogObject.message} alt="Dogs" />
-        <button type="button" onClick={this.fetchDog()} />
+        {/* <img src={this.state.dogObject.message} alt="Dogs" /> */}
+        <button type="button" onClick={ () => this.fetchDog()} >Clicar</button>
       </div>
     );
   }
@@ -50,6 +50,7 @@ class App extends React.Component {
           ) : (
             <img src={dogObject.message} alt="Dogs" />
           )}
+          {this.refreshDogPicture()}
         </div>
       </div>
     );
