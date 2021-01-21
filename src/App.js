@@ -35,6 +35,15 @@ class App extends React.Component {
       </div>
     );
   }
+  
+  shouldComponentUpdate (nextProps, nextState) {
+    console.log("shouldComponentUpdate", this.state, nextState);
+    return true;
+  }
+
+  componentDidUpdate(prevProps, PrevState){
+    console.log("ComponentDidUpdate", this.state, PrevState); 
+  }
 
   render() {
     const { loading, dogObject } = this.state;
